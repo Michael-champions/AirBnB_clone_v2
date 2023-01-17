@@ -1,6 +1,6 @@
 #!/bin/python3
 
-""" for the 0-hello_route """
+""" for the '0-hello_route' module """
 """ the route app must be listening on '0.0.0.0' """
 
 from flask import Flask
@@ -8,8 +8,11 @@ from flask import Flask
     app = Flask(__name__)
 
     @app.route('/', strict_slashes=False)
-    def get(self):
+    def index():
 
-        return {"HELLO HBNB!"}
+        """ returns HELLO HBNB! """
+        return "HELLO HBNB!"
+
     if __name__ == '__main__'
-    app.run(host = '0.0.0.0', port = '5000')
+
+    app.run(host='0.0.0.0', port='5000')
